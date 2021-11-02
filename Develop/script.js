@@ -1,6 +1,7 @@
+$(document).ready(function() {
+
 // Loads current time in header 
-var today = moment().format("MMMM Do YYYY");
-    $("#currentDay").text(today);
+$("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
 //saves to local storage when save button is clicked
 $(".saveBtn").on("click", function () {
@@ -22,18 +23,30 @@ $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
 $("#hour18 .description").val(localStorage.getItem("hour18"));
 
-
+// created loop to evaluate time and refresh classes based on that
+function tracker() {
+    var currentTime = moment().hour();
 
  $(".time-block").each(function () {
-            var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+     var timeHour = parseInt($(this).attr("id").split("hour")[1]);
+
 // updated classes based on current time
-    if (timeHour < moment().format("HH")) {
-        timeHour.removeClass("future present").addClass("past");
+    if (timeHour < currentTime) {
+        $(this).addClass("past");
+        $(this).removeClass("future");
+        $(this).removeClass("present");
     }
-    else if (timeHour === moment().format("HH")) {
-        timeHour.removeClass("past future").addClass("present");
+    else if (timeHour === currentTime) {
+        $(this).removeClass("past");
+        $(this).addClass("present");
+        $(this).removeClass("future");
     }
-    else if (timeHour > moment().format("HH")) {
-        timeHour.removeClass("present past").addClass("past");           
-        }
-    })
+    else {
+        $(this).removeClass("present");
+        $(this).removeClass("past");
+        $(this).addClass("future");
+    }
+})
+}
+    tracker();
+})
