@@ -29,4 +29,4 @@ Create a daily work planner to keep track of upcoming tasks
 
 
 ### Screenshot
-![Screenshot](./assets/screenshot.png)
+![Screenshot](screenshot.PNG)
