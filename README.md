@@ -19,6 +19,7 @@ Create a daily work planner to keep track of upcoming tasks
 * JavaScript
 * jQuery
 * Bootstrap
+* Moment.js
 
 ### Links
 :star: [Deployed Website](https://rpb543.github.io/functional-day-planner-rpb/)\
