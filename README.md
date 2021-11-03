@@ -4,7 +4,7 @@
 
 Create a daily work planner to keep track of upcoming tasks
 
-## Critiera
+### Critiera
 
 * When the planner is opened, the current day is displayed at the top of the screen
 * Timeblocks are shown for standard business hours when the page is scrolled down
@@ -12,7 +12,7 @@ Create a daily work planner to keep track of upcoming tasks
 * Events can be entered when an individual time block is selected
 * The text is saved in local storage when the save button for that timeblock is clicked and is still present when the page is refreshed
 
-## Programs and libraries used
+### Programs and 3rd Party Libraries Used  
 
 * HTML
 * CSS
@@ -20,12 +20,12 @@ Create a daily work planner to keep track of upcoming tasks
 * jQuery
 * Bootstrap
 
-## Links
+### Links
 :star: [Deployed Website](https://rpb543.github.io/functional-day-planner-rpb/)\
 :boom: [Link to Repo](https://github.com/RPB543/functional-day-planner-rpb)\
 :dizzy: [GitHub](https://github.com/RPB543)
 
 
 
-## Screenshot
-![screenshot]
+### Screenshot
+![screenshot](./screenshot.png)
